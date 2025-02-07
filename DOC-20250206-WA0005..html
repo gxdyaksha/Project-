@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        
+        function toggleTrending() {
+            const trendingSection = document.getElementById('trending');
+            if (trendingSection.style.display === "none") {
+                trendingSection.style.display = "block";
+            } else {
+                trendingSection.style.display = "none";
+            }
+        }
+
+        
+        function expandArticle(articleId) {
+            const article = document.getElementById(articleId);
+            if (article.style.maxHeight) {
+                article.style.maxHeight = null; // Collapses the article
+            } else {
+                article.style.maxHeight = article.scrollHeight + "px"; // Expands the article
+            }
+        }
+
+        
+        window.onload = function() {
+            alert("Breaking News: New Technology Revolutionizing the World!");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>The Daily News</h1>
+        <p>Your trusted source of information</p>
+    </header>
+
+    <div class="main-content">
+        <section class="left-column">
+            <article class="headline">
+                <h2>Breaking News: New Technology Revolutionizing the World</h2>
+                <p class="date">December 13, 2024</p>
+                <p>The latest innovation in artificial intelligence is changing industries globally. Experts predict that the new technology will have a profound impact on both business and daily life...</p>
+                <button onclick="expandArticle('headline-article')">Read More</button>
+                <div id="headline-article" class="expanded-article" style="max-height: 0; overflow: hidden;">
+                    <p>As AI continues to evolve, its applications range from healthcare to finance, offering unprecedented solutions. However, experts warn about the ethical implications and job displacement due to automation...</p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Climate Change: A Global Challenge</h3>
+                <p>Scientists have gathered in Paris to discuss new climate strategies aimed at combating the rapid effects of global warming...</p>
+                <button onclick="expandArticle('climate-article')">Read More</button>
+                <div id="climate-article" class="expanded-article" style="max-height: 0; overflow: hidden;">
+                    <p>Discussions focused on renewable energy sources, carbon emissions, and the urgent need for global cooperation to address environmental challenges that affect us all...</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="right-column">
+            <h3>Trending Today</h3>
+            <button onclick="toggleTrending()">Trending News</button>
+            <div id="trending" style="display: block;">
+                <ul>
+                    <li><a href="#">Tech Giants Merge for New AI Advancements</a></li>
+                    <li><a href="#">Global Leaders Meet to Address Economic Crisis</a></li>
+                    <li><a href="#">Sports: Local Team Wins National Championship</a></li>
+                    <li><a href="#">Entertainment: Upcoming Movie Breaks Box Office Records</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Daily News. All rights reserved.</p>
+    </footer>
+</body>
+</html>

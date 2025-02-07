@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Awareness</title>
+    <script>
+        
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+
+       
+        window.onload = function() {
+            alert("Remember to use social media responsibly and in moderation.");
+        }
+    </script>
+</head>
+<body>
+    <hr>
+    <h1><p align="center">Social Media Awareness</p></h1>
+    <hr>
+
+    <img align="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPLBOOvesCN2c0Qp3AdcJahgHe2Br5E7GtFQ&usqp=CAU" height="200" width="600">
+
+    <h2>What Is Social Media</h2>
+    <p>We can define Social media as a platform which enables people to interact and socially connect to other people in the society and around the world. It is the medium through which we communicate and share our opinions on everything under the sun.</p>
+
+    <button onclick="toggleSection('factsSection')"> Facts About Social Media</button>
+    <div id="factsSection" style="display:block;">
+        <h2>Facts About Social Media</h2>
+        <ul>
+            <li>Social Media has over 4.7 billion active users around the world.</li>
+            <li>People spend an average time of 2 hours and 30 minutes daily on Social Media.</li>
+        </ul>
+    </div>
+
+    <button onclick="toggleSection('giantsSection')"> The Social Media Giants</button>
+    <div id="giantsSection" style="display:block;">
+        <h2>The Social Media Giants</h2>
+        <p>The Popular social media platforms are YouTube, Facebook, Instagram, Twitter, WhatsApp etc.</p>
+        <table border="2" align="center" cellspacing="5" cellpadding="10" width="200" height="150">
+            <thead>
+                <tr>
+                    <th>Social Media Apps</th>
+                    <th>Users</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <td>Facebook</td>
+                    <td>1.3 billion</td>
+                </tr>
+                <tr align="center">
+                    <td>Instagram</td>
+                    <td>1.4 billion</td>
+                </tr>
+                <tr align="center">
+                    <td>WhatsApp</td>
+                    <td>1 billion</td>
+                </tr>
+                <tr align="center">
+                    <td>Twitter</td>
+                    <td>1 billion</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Social Media Addiction</h2>
+    <p>One of the most fatal consequences of social media is people getting addicted to it. Some have lost connection and relationship with their family members due to excess use of social networking sites. People waste hours on social media and it results in a number of negative health impacts such as strain, eye problems, fatigue, distraction etc.</p>
+
+    <h2>Privacy Issue</h2>
+    <p>With the large amount of data on user social media accounts, scammers can find enough information to spy on users, steal identities and attempt scams. Data protection issues and loopholes in privacy controls can put user information at risk when using social media.</p>
+
+    <h2>Conclusion</h2>
+    <p>Though social media offers a global platform to share and express, its constant engagement is affecting individual productivity, relationships, and society as a whole. It is extremely necessary to have self-control while using these sites. Platforms like YouTube and Instagram have added features so that one can monitor how much time they spend online. With the help of self-realization and such features, one can definitely overcome these challenges.</p>
+</body>
+</html>
